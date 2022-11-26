@@ -2,16 +2,16 @@
   <div
     class="hero min-h-screen max-w-screen bg-gradient-to-br from-slate-800 via-slate-900 to-black sticky overflow-x-clip"
   >
-    <div class="w-screen min-h-screen">
+    <div class="w-screen min-h-screen my-5">
       <div class="mx-5 lg:mx-20">
         <!-- ANCHOR Main content -->
-        <div class="md:text-xl lg:text-xl my-10">
+        <div class="text-sm md:text-xl lg:text-xl md:mb-10 mb-1">
           <div class="text-yellow-600 mb-5">
             <span class="text-white"> import {</span>
             <span v-for="(page, index) in pages" :key="index">
               <nuxtLink
                 :to="page.to"
-                class="btn btn-sm btn-ghost md:text-xl lg:text-xl link"
+                class="btn btn-sm btn-ghost px-1 md:text-xl lg:text-xl link"
                 >"{{ page.property }}"<span
                   class="text-white hover:bg-transparent"
                 >
@@ -19,10 +19,15 @@
                 ></nuxtLink
               >
             </span>
+            <a href="/C-McGregory-Resume.pdf">
+              <span class="btn btn-sm btn-ghost md:text-xl lg:text-xl link"
+                >resume</span
+              ></a
+            >
             <span class="text-white">} from links; </span>
           </div>
 
-          <div class="text-yellow-600">
+          <div class="text-yellow-600 mb-5 md:mb-5">
             /* A Full-stack Software Developer with 3+ years of industry
             experience */
           </div>
@@ -69,17 +74,18 @@
             >
               <a
                 :href="social.link"
-                class="btn btn-sm btn-ghost bg-slate-800 my-5"
+                class="btn btn-sm btn-ghost bg-slate-800 my-5 md:text-xl lg:text-xl"
               >
                 <Icon :icon="social.icon" />
                 {{ social.name }}</a
               >
             </div>
           </div>
-          <div class="flex flex-col space-y-5 overflow-auto mb-5">
+          <div class="flex flex-col space-y-5 overflow-auto">
             <div><p class="text-yellow-600">// Most recent posts</p></div>
-            <div class="flex flex-row space-x-2 overflow-x-scroll">
-              <ImageLoader class="" />
+            <div
+              class="flex flex-row space-x-2 overflow-x-scroll md:grid md:grid-cols-4 md:gap-4"
+            >
               <ImageLoader class="" />
               <ImageLoader class="" />
               <ImageLoader class="" />
