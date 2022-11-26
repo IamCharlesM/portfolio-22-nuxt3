@@ -1,59 +1,103 @@
 <template>
   <div
-    class="hero min-h-screen bg-gradient-to-br from-slate-800 via-slate-900 to-black"
+    class="hero h-screen bg-gradient-to-br from-slate-800 via-slate-900 to-black relative"
   >
     <div class="w-full h-screen">
-      <div class="mx-20">
-        <div class="text-2xl mt-10">
-          <div class="mb-5">
+      <div class="mx-5 lg:mx-20">
+        <!-- ANCHOR Main content -->
+        <div class="md:text-xl lg:text-xl my-10">
+          <div class="text-yellow-600 mb-5">
+            import {
             <span v-for="(page, index) in pages" :key="index">
-              import { {{ page.property }} } from '{{ page.property }}'; <br />
+              <nuxtLink
+                :to="page.to"
+                class="btn btn-sm btn-ghost md:text-xl lg:text-xl link"
+                >"{{ page.property }}"<span
+                  class="text-white hover:bg-transparent"
+                >
+                  ,</span
+                ></nuxtLink
+              >
             </span>
+            } from links;
           </div>
 
-          <div>
-            /* Here is some information about me, skills are links to projects.
-            */
+          <div class="text-yellow-600">
+            /* A Full-stack Software Developer with 3+ years of industry
+            experience */
           </div>
-          <span class="text-success"> let my = {</span>
+          <span class="text-white">let </span
+          ><span class="text-primary">my = {</span>
           <div class="text-primary indent-8">
-            <p class="">name : "Charles McGregory",<br /></p>
-            <p class="">profession : "Full-Stack Developer",<br /></p>
-            <p class="">skills : [ <br /></p>
+            <p class="">
+              name: <span class="text-yellow-600"> "Charles McGregory"</span
+              ><span class="text-white">,</span>
+            </p>
+            <p class="">
+              profession:
+              <span class="text-yellow-600">
+                "Full-stack Software Developer"</span
+              ><span class="text-white">,</span>
+            </p>
+            <p class="">skills: <span class="text-info">[</span></p>
           </div>
 
-          <div class="w-2/3 h-fit ml-16">
+          <!-- ANCHOR Skills loop -->
+          <div class="md:w-2/3 lg:w-2/3 md:ml-16 lg:ml-16">
             <span
               v-for="(skill, index) in skills"
               :key="index"
-              class="link break-normal"
+              class="btn btn-sm btn-ghost md:text-xl lg:text-xl text-yellow-600 link"
             >
-              "{{ skill.name }}"<span class="text-white"> ,</span>
+              "{{ skill.name }}"<span class="text-white hover:bg-transparent">
+                ,</span
+              >
             </span>
           </div>
-          <div class="text-primary">
-            ],
 
-            <br />
-            },
+          <div class="indent-6 text-info">],</div>
+          <div class="text-primary">},</div>
+        </div>
+
+        <div class="md:text-xl lg:text-xl text-white">
+          <p class="text-yellow-600">// Network with me</p>
+          <div class="flex flex-row">
+            <div
+              v-for="(social, index) in socials"
+              :key="index"
+              class="md:text-xl lg:text-xl mr-2 link"
+            >
+              <a
+                :href="social.link"
+                class="btn btn-sm btn-ghost bg-slate-800 my-5"
+              >
+                <Icon :icon="social.icon" />
+                {{ social.name }}</a
+              >
+            </div>
           </div>
+          <p class="text-yellow-600">// Most recent posts</p>
         </div>
       </div>
     </div>
   </div>
 </template>
 <script>
+import { Icon } from "@iconify/vue";
 export default {
+  components: {
+    Icon,
+  },
   data() {
     return {
       pages: [
         {
           property: "home",
-          location: "/",
+          to: "/",
         },
         {
           property: "projects",
-          location: "/projects",
+          to: "/projects",
         },
       ],
       skills: [
@@ -72,6 +116,18 @@ export default {
         { name: "MySQL" },
         { name: "MongoDB" },
         { name: "Docker" },
+      ],
+      socials: [
+        {
+          name: "linkedin",
+          link: "https://www.linkedin.com/in/forcharles/",
+          icon: "mdi:linkedin",
+        },
+        {
+          name: "Github",
+          link: "https://github.com/IamCharlesM/",
+          icon: "mdi:github",
+        },
       ],
     };
   },
