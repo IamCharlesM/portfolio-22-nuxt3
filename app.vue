@@ -1,13 +1,13 @@
 <template>
   <div
-    class="hero h-screen bg-gradient-to-br from-slate-800 via-slate-900 to-black relative"
+    class="hero min-h-screen max-w-screen bg-gradient-to-br from-slate-800 via-slate-900 to-black sticky overflow-x-clip"
   >
-    <div class="w-full h-screen">
+    <div class="w-screen min-h-screen">
       <div class="mx-5 lg:mx-20">
         <!-- ANCHOR Main content -->
         <div class="md:text-xl lg:text-xl my-10">
           <div class="text-yellow-600 mb-5">
-            import {
+            <span class="text-white"> import {</span>
             <span v-for="(page, index) in pages" :key="index">
               <nuxtLink
                 :to="page.to"
@@ -19,7 +19,7 @@
                 ></nuxtLink
               >
             </span>
-            } from links;
+            <span class="text-white">} from links; </span>
           </div>
 
           <div class="text-yellow-600">
@@ -76,7 +76,20 @@
               >
             </div>
           </div>
-          <p class="text-yellow-600">// Most recent posts</p>
+          <div class="flex flex-col space-y-5 overflow-auto mb-5">
+            <div><p class="text-yellow-600">// Most recent posts</p></div>
+            <div class="flex flex-row space-x-2 overflow-x-scroll">
+              <ImageLoader class="" />
+              <ImageLoader class="" />
+              <ImageLoader class="" />
+              <ImageLoader class="" />
+              <ImageLoader class="" />
+              <ImageLoader class="" />
+              <ImageLoader class="" />
+              <ImageLoader class="" />
+              <ImageLoader class="" />
+            </div>
+          </div>
         </div>
       </div>
     </div>
