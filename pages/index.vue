@@ -84,7 +84,7 @@
           <div class="flex flex-col space-y-5 overflow-auto">
             <div><p class="text-yellow-600">// Most recent posts</p></div>
             <div
-              class="flex flex-row space-x-2 overflow-x-scroll md:grid md:grid-cols-4 md:gap-4"
+              class="flex flex-row space-x-2 overflow-x-auto md:grid md:grid-cols-4 md:gap-4"
             >
               <ImageLoader class="" />
               <ImageLoader class="" />
