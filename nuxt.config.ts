@@ -11,8 +11,8 @@ export default defineNuxtConfig({
     head: {
       charset: "utf-16",
       viewport: "width=device-width, height=device-height, initial-scale=1,",
-      title: "TESTING",
-      meta: [{ name: "description", content: "pls" }],
+      title: "Charles McGregory's portfolio",
+      meta: [{ name: "description", content: "I like to dabble in a lot of software related things." }],
     },
   },
 });
