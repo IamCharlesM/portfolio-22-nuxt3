@@ -19,7 +19,10 @@
                 ></nuxtLink
               >
             </span>
-            <a href="/C-McGregory-Resume.pdf">
+            <a
+              href="https://docs.google.com/document/d/1iU0btnTA44hugqX1iixqxUWb-Nl92XZbhwmcqvL32aQ/edit#heading=h.rlsx4o5b4mpo"
+              target="_blank"
+            >
               <span class="btn btn-sm btn-ghost md:text-xl lg:text-xl link"
                 >resume</span
               ></a
