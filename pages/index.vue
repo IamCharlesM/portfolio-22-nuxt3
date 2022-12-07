@@ -110,6 +110,9 @@ export default {
   components: {
     Icon,
   },
+  mounted() {
+    console.log(this.$router.options.routes);
+  },
   data() {
     return {
       pages: [
@@ -119,7 +122,7 @@ export default {
         },
         {
           property: "projects",
-          to: "/projects",
+          to: "/project",
         },
       ],
       skills: [
