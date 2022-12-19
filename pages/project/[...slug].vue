@@ -38,7 +38,6 @@ const { data, pending } = await useFetch(
 
 const dateString = data._value.posts[0].updated_at;
 
-console.log(dateString);
 // ANCHOR Create a new Date object from the date string
 const date = new Date(dateString);
 
