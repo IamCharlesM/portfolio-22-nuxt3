@@ -85,7 +85,10 @@
             </div>
           </div>
           <div class="flex flex-col space-y-5 overflow-auto">
-            <div><p class="text-yellow-600">// Most recent posts</p></div>
+            <div class="flex flex-row space-x-5">
+              <p class="text-yellow-600">// Most recent posts</p>
+              <span class="text-yellow-600 lg:hidden">Swipe 👉🏿</span>
+            </div>
 
             <Posts
               class="flex flex-row space-x-4 overflow-x-auto md:grid md:grid-cols-4 md:gap-2"
