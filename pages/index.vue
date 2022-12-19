@@ -24,7 +24,7 @@
               target="_blank"
             >
               <span class="btn btn-sm btn-ghost md:text-xl lg:text-xl link"
-                >resume</span
+                >"resume"</span
               ></a
             >
             <span class="text-white">} from links; </span>
