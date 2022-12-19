@@ -103,9 +103,6 @@ export default {
   components: {
     Icon,
   },
-  mounted() {
-    console.log(this.$router.options.routes);
-  },
   data() {
     return {
       pages: [
