@@ -19,12 +19,7 @@
         />
         <div class="">
           <span v-for="(tag, index) in post.tags" :key="index" class="">
-            <nuxt-link
-              :to="tag.slug"
-              :key="tag.id"
-              class="badge badge-outline m-1"
-              >{{ tag.name }}</nuxt-link
-            >
+            <span class="badge badge-outline m-1">{{ tag.name }}</span>
           </span>
         </div>
       </div>
