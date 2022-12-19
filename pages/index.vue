@@ -88,7 +88,7 @@
             <div><p class="text-yellow-600">// Most recent posts</p></div>
 
             <Posts
-              class="flex flex-row space-x-1 overflow-x-auto md:grid md:grid-cols-4"
+              class="flex flex-row space-x-4 overflow-x-auto md:grid md:grid-cols-4 md:gap-2"
             />
           </div>
         </div>

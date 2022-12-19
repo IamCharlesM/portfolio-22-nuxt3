@@ -11,9 +11,10 @@
       v-else
       v-for="post in data.posts"
       :key="post.id"
-      class="card w-96 bg-base-100 shadow-xl"
+      class="card min-w-fit bg-base-100 shadow-xl"
     >
       <figure>
+        <!--  ANCHOR image and alt text -->
         <img
           class="h-48"
           :src="post.feature_image"
@@ -21,6 +22,7 @@
         />
       </figure>
       <div class="card-body">
+        <!-- ANCHOR Post title -->
         <h2 class="card-title">
           {{ post.title }}
           <div class="badge">NEW</div>
@@ -28,11 +30,9 @@
         <p>{{ post.excerpt }}</p>
         <div class="card-actions justify-end">
           <div v-for="tag in post.tags" :key="tag.id">
-            <span
-              v-if="tag.visibility === 'public'"
-              class="badge badge-outline"
-              >{{ tag.name }}</span
-            >
+            <div v-if="tag.visibility === 'public'" class="badge badge-outline">
+              {{ tag.name }}
+            </div>
             <span v-else class="hidden"></span>
           </div>
         </div>
@@ -41,16 +41,8 @@
   </div>
 </template>
 
-<script>
-export default {
-  setup() {
-    const { data, pending } = useLazyFetch(
-      "https://content.charlesis.me/ghost/api/content/posts/?key=5d8b3cdb92a539dede4ee744a0&include=tags"
-    );
-    return {
-      data,
-      pending,
-    };
-  },
-};
+<script setup>
+const { data, pending } = useLazyFetch(
+  "https://content.charlesis.me/ghost/api/content/posts/?key=5d8b3cdb92a539dede4ee744a0&include=tags"
+);
 </script>
