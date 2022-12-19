@@ -3,6 +3,9 @@
     <div v-if="pending">
       <!-- Display an empty div if data is null -->
       <ImageLoader class="" />
+      <ImageLoader class="" />
+      <ImageLoader class="" />
+      <ImageLoader class="" />
     </div>
     <div
       v-else
@@ -11,7 +14,11 @@
       class="card w-96 bg-base-100 shadow-xl"
     >
       <figure>
-        <img :src="post.feature_image" :alt="post.feature_image_alt" />
+        <img
+          class="h-48"
+          :src="post.feature_image"
+          :alt="post.feature_image_alt"
+        />
       </figure>
       <div class="card-body">
         <h2 class="card-title">
@@ -20,12 +27,12 @@
         </h2>
         <p>{{ post.excerpt }}</p>
         <div class="card-actions justify-end">
-          <div
-            v-for="tag in post.tags"
-            :key="tag.id"
-            class="badge badge-outline"
-          >
-            <span v-if="tag.visibility === 'public'">{{ tag.name }}</span>
+          <div v-for="tag in post.tags" :key="tag.id">
+            <span
+              v-if="tag.visibility === 'public'"
+              class="badge badge-outline"
+              >{{ tag.name }}</span
+            >
             <span v-else class="hidden"></span>
           </div>
         </div>
