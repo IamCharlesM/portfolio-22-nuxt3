@@ -1,13 +1,16 @@
 <template>
   <div>
-    <div class="relative mx-auto max-w-7xl">
-      <div class="text-center">
-        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-          From the blog
-        </h2>
-        <p class="mx-auto mt-3 max-w-2xl text-xl text-gray-500 sm:mt-4">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero
-          labore natus atque, ducimus sed.
+    <div class="relative max-w-7xl justify-items-center">
+      <div>
+        <h1 class="text-3xl text-center font-bold lg:text-4xl text-white">
+          All projects
+        </h1>
+        <p class="max-w-4xl text-xl mx-auto text-white">
+          Welcome to my projects webpage! Here you will find a selection of my
+          past and current projects, ranging from personal hobbies to
+          professional work. I hope you find something that interests you, and
+          feel free to contact me if you have any questions or would like to
+          collaborate on a project.
         </p>
       </div>
       <posts
