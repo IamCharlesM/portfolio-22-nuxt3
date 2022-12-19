@@ -47,7 +47,6 @@ export default {
     const { data, pending } = useLazyFetch(
       "https://content.charlesis.me/ghost/api/content/posts/?key=5d8b3cdb92a539dede4ee744a0&include=tags"
     );
-    console.log(data);
     return {
       data,
       pending,
