@@ -89,14 +89,7 @@
             <div
               class="flex flex-row space-x-2 overflow-x-auto md:grid md:grid-cols-4 md:gap-4"
             >
-              <ImageLoader class="" />
-              <ImageLoader class="" />
-              <ImageLoader class="" />
-              <ImageLoader class="" />
-              <ImageLoader class="" />
-              <ImageLoader class="" />
-              <ImageLoader class="" />
-              <ImageLoader class="" />
+              <Posts />
             </div>
           </div>
         </div>
@@ -104,6 +97,7 @@
     </div>
   </div>
 </template>
+
 <script>
 import { Icon } from "@iconify/vue";
 export default {
@@ -158,4 +152,3 @@ export default {
   },
 };
 </script>
-<style lang=""></style>
