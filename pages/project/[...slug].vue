@@ -36,8 +36,9 @@ const { data, pending } = await useFetch(
   `https://content.charlesis.me/ghost/api/content/posts/slug/${slug}/?key=5d8b3cdb92a539dede4ee744a0&include=tags`
 );
 
-const dateString = "2022-12-19T05:08:33.000+00:00";
+const dateString = data._value.posts[0].updated_at;
 
+console.log(dateString);
 // ANCHOR Create a new Date object from the date string
 const date = new Date(dateString);
 
