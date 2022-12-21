@@ -7,7 +7,7 @@
       class="hero-content text-center flex flex-col"
     >
       <h1 class="text-3xl text-center font-bold lg:text-4xl text-white">
-        {{ post.title }}
+        {{ post.meta_title }}
       </h1>
 
       <h3>Last updated {{ formattedDate }}</h3>
@@ -36,7 +36,9 @@ const { data, pending } = await useFetch(
   `https://content.charlesis.me/ghost/api/content/posts/slug/${slug}/?key=5d8b3cdb92a539dede4ee744a0&include=tags`
 );
 
-const dateString = data._value.posts[0].updated_at;
+const meta = data.value.posts[0];
+
+const dateString = meta.updated_at;
 
 // ANCHOR Create a new Date object from the date string
 const date = new Date(dateString);
@@ -46,6 +48,11 @@ const formattedDate = date.toLocaleDateString("en-US", {
   month: "short",
   day: "numeric",
   year: "numeric",
+});
+
+useHead({
+  title: meta.title,
+  meta: [{ name: "description", content: meta.meta_description }],
 });
 </script>
 
