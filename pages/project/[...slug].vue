@@ -52,7 +52,10 @@ const formattedDate = date.toLocaleDateString("en-US", {
 
 useHead({
   title: meta.title,
-  meta: [{ name: "description", content: meta.meta_description }],
+  meta: [
+    { name: "description", content: meta.meta_description },
+    { hid: "og-image", property: "og:image", content: meta.feature_image },
+  ],
 });
 </script>
 
