@@ -2,7 +2,7 @@
   <div>
     <div class="relative max-w-7xl justify-items-center">
       <div>
-        <h1 class="text-3xl text-center font-bold lg:text-4xl text-white">
+        <h1 class="text-3xl text-center font-bold lg:text-4xl text-white mb-5">
           All projects
         </h1>
         <p class="max-w-4xl text-xl mx-auto text-white">
@@ -25,4 +25,14 @@ definePageMeta({ layout: "project" });
 const { data, pending } = useFetch(
   "https://content.charlesis.me/ghost/api/content/posts/?key=5d8b3cdb92a539dede4ee744a0&include=tags"
 );
+
+useHead({
+  title: "All projects",
+  meta: [
+    {
+      name: "description",
+      content: "I'm legit including this so Google doesnt't yell at me.",
+    },
+  ],
+});
 </script>
