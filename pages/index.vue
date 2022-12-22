@@ -107,8 +107,6 @@ const { data, pending } = useFetch(
   "https://content.charlesis.me/ghost/api/content/tags/?key=5d8b3cdb92a539dede4ee744a0"
 );
 
-console.log(data._value);
-
 const pages = ref([
   {
     property: "home",
