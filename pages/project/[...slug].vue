@@ -67,4 +67,79 @@ useHead({
 :deep(.kg-bookmark-description) {
   text-align: left;
 }
+
+:deep(.kg-bookmark-container) {
+  flex-direction: row;
+  display: flex;
+}
+
+:deep(.kg-bookmark-thumbnail) {
+  height: auto;
+  width: 15em;
+  display: inherit;
+}
+
+:deep(.kg-bookmark-thumbnail img) {
+  margin: auto 0;
+}
+:deep(.kg-bookmark-author) {
+  display: none;
+}
+
+.kg-bookmark-card,
+.kg-bookmark-publisher {
+  position: relative;
+  width: 100%;
+}
+
+:deep(
+    .kg-bookmark-card a.kg-bookmark-container,
+    .kg-bookmark-card a.kg-bookmark-container:hover
+  ) {
+  display: flex;
+  flex-grow: 1;
+  flex-basis: 100%;
+  text-decoration: none;
+  border-radius: 3px;
+  border: 1px solid rgb(124 139 154/25%);
+  overflow: hidden;
+  color: inherit;
+}
+
+:deep(.kg-bookmark-content) {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-basis: 100%;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+:deep(.kg-bookmark-title) {
+  font-size: auto;
+  line-height: 1.4em;
+  font-weight: 600;
+}
+
+:deep(.kg-bookmark-description) {
+  display: inline-flex;
+  font-size: auto;
+  line-height: 1.5em;
+  margin-top: 3px;
+  font-weight: 400;
+  opacity: 0.7;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+:deep(.kg-bookmark-metadata) {
+  display: none;
+  align-items: center;
+  margin-top: 22px;
+  width: 100%;
+  font-size: 1.4rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
 </style>
