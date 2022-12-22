@@ -52,13 +52,13 @@
 
           <!-- ANCHOR Skills loop -->
           <div class="md:w-2/3 lg:w-2/3 md:ml-16 lg:ml-16">
-            <span
-              v-for="(skill, index) in skills"
-              :key="index"
-              class="btn btn-sm btn-ghost md:text-xl lg:text-xl text-yellow-600 link"
-            >
-              "{{ skill.name }}"<span class="text-white hover:bg-transparent">
-                ,</span
+            <span v-for="(tag, index) in data.tags" :key="index">
+              <span
+                v-if="tag.name != '#projects'"
+                class="btn btn-sm pr-0 btn-ghost hover:bg-transparent hover:animate-pulse md:text-xl lg:text-xl text-yellow-600 link normal-case"
+                >"{{ tag.name }}"</span
+              ><span class="text-white hover:bg-transparent"
+                ><span v-if="tag.name != '#projects'">,</span></span
               >
             </span>
           </div>
@@ -100,54 +100,52 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { Icon } from "@iconify/vue";
-export default {
-  components: {
-    Icon,
+
+const { data, pending } = useFetch(
+  "https://content.charlesis.me/ghost/api/content/tags/?key=5d8b3cdb92a539dede4ee744a0"
+);
+
+console.log(data._value);
+
+const pages = ref([
+  {
+    property: "home",
+    to: "/",
   },
-  data() {
-    return {
-      pages: [
-        {
-          property: "home",
-          to: "/",
-        },
-        {
-          property: "projects",
-          to: "/project",
-        },
-      ],
-      skills: [
-        { name: "Python" },
-        { name: "Amazon Web Services" },
-        { name: "AWS Lambda" },
-        { name: "Nuxt.js" },
-        { name: "Full-Stack Development" },
-        { name: "AngularJS" },
-        { name: "javascript" },
-        { name: "DevOps" },
-        { name: "Django" },
-        { name: "Linux" },
-        { name: "HTML" },
-        { name: "CSS" },
-        { name: "MySQL" },
-        { name: "MongoDB" },
-        { name: "Docker" },
-      ],
-      socials: [
-        {
-          name: "linkedin",
-          link: "https://www.linkedin.com/in/forcharles/",
-          icon: "mdi:linkedin",
-        },
-        {
-          name: "Github",
-          link: "https://github.com/IamCharlesM/",
-          icon: "mdi:github",
-        },
-      ],
-    };
+  {
+    property: "projects",
+    to: "/project",
   },
-};
+]);
+const skills = ref([
+  { name: "Python" },
+  { name: "Amazon Web Services" },
+  { name: "AWS Lambda" },
+  { name: "Nuxt.js" },
+  { name: "Full-Stack Development" },
+  { name: "AngularJS" },
+  { name: "javascript" },
+  { name: "DevOps" },
+  { name: "Django" },
+  { name: "Linux" },
+  { name: "HTML" },
+  { name: "CSS" },
+  { name: "MySQL" },
+  { name: "MongoDB" },
+  { name: "Docker" },
+]);
+const socials = ref([
+  {
+    name: "linkedin",
+    link: "https://www.linkedin.com/in/forcharles/",
+    icon: "mdi:linkedin",
+  },
+  {
+    name: "Github",
+    link: "https://github.com/IamCharlesM/",
+    icon: "mdi:github",
+  },
+]);
 </script>
