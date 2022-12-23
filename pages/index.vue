@@ -117,23 +117,7 @@ const pages = ref([
     to: "/project",
   },
 ]);
-const skills = ref([
-  { name: "Python" },
-  { name: "Amazon Web Services" },
-  { name: "AWS Lambda" },
-  { name: "Nuxt.js" },
-  { name: "Full-Stack Development" },
-  { name: "AngularJS" },
-  { name: "javascript" },
-  { name: "DevOps" },
-  { name: "Django" },
-  { name: "Linux" },
-  { name: "HTML" },
-  { name: "CSS" },
-  { name: "MySQL" },
-  { name: "MongoDB" },
-  { name: "Docker" },
-]);
+
 const socials = ref([
   {
     name: "linkedin",
