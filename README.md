@@ -1,42 +1,30 @@
-# Nuxt 3 Minimal Starter
+# Portfolio
 
-Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
+Welcome to my portfolio! This website was built with [Nuxt.js](https://nuxtjs.org/) and [Tailwind CSS](https://tailwindcss.com/).
 
-## Setup
+## Features
 
-Make sure to install the dependencies:
+- Responsive design for all screen sizes
+- Clean and modern UI
+- Easy navigation
+- Option to view my resume and contact me
+
+## Installation
+
+1. Clone the repository:
 
 ```bash
-# yarn
-yarn install
-
-# npm
-npm install
-
-# pnpm
-pnpm install --shamefully-hoist
+git clone https://github.com/[USERNAME]/[REPOSITORY].git
 ```
 
-## Development Server
-
-Start the development server on http://localhost:3000
-
 ```bash
+cd [REPOSITORY]
+npm install
 npm run dev
 ```
 
-## Production
-
-Build the application for production:
+## Deployment
 
 ```bash
-npm run build
+npm run build && npm run start
 ```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.

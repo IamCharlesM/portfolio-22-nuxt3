@@ -19,6 +19,8 @@
     "postcss": "^8.4.19"
   },
   "dependencies": {
-    "@tryghost/content-api": "^1.11.5"
+    "@nuxtjs/robots": "^3.0.0",
+    "@tryghost/content-api": "^1.11.5",
+    "vue-gtag-next": "^1.14.0"
   }
 }
