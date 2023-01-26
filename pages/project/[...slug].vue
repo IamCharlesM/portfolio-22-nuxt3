@@ -33,7 +33,7 @@ definePageMeta({ layout: "project" });
 const route = useRoute();
 let slug = route.params.slug[0];
 const { data, pending } = await useFetch(
-  `https://content.charlesis.me/ghost/api/content/posts/slug/${slug}/?key=5d8b3cdb92a539dede4ee744a0&include=tags`
+  `https://content.charlesisa.dev/ghost/api/content/posts/slug/${slug}/?key=5d8b3cdb92a539dede4ee744a0&include=tags`
 );
 
 const meta = data.value.posts[0];
