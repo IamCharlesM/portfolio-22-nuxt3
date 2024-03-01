@@ -24,7 +24,17 @@
               target="_blank"
             >
               <span class="btn btn-sm btn-ghost md:text-xl lg:text-xl link"
-                >"resume"</span
+                >"Resume"<span class="text-white hover:bg-transparent">
+                  ,</span
+                ></span
+              ></a
+            >
+            <a
+              href="https://calendly.com/d/44j-vwq-mtv/30-minute-meeting"
+              target="_blank"
+            >
+              <span class="btn btn-sm btn-ghost md:text-xl lg:text-xl link"
+                >"Work with me"</span
               ></a
             >
             <span class="text-white">} from links; </span>
@@ -80,8 +90,8 @@
                 class="btn btn-sm btn-ghost bg-slate-800 my-5 md:text-xl lg:text-xl"
               >
                 <Icon :icon="social.icon" />
-                {{ social.name }}</a
-              >
+                {{ social.name }}
+              </a>
             </div>
           </div>
           <div class="flex flex-col space-y-5 overflow-auto">
