@@ -39,6 +39,22 @@
         <li>
           <nuxtLink :to="page.to" class="">{{ page.property }}</nuxtLink>
         </li>
+        <li>
+          <a
+            href="https://calendly.com/d/44j-vwq-mtv/30-minute-meeting"
+            target="_blank"
+            class=""
+            >Work with me</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://docs.google.com/document/d/1iU0btnTA44hugqX1iixqxUWb-Nl92XZbhwmcqvL32aQ/edit#heading=h.rlsx4o5b4mpo"
+            target="_blank"
+            class=""
+            >Resume</a
+          >
+        </li>
       </ul>
     </div>
     <div class="navbar-end"></div>
