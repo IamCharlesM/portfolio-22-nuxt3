@@ -113,6 +113,8 @@
 <script setup>
 import { Icon } from "@iconify/vue";
 
+definePageMeta({ layout: "project" });
+
 const { data, pending } = useFetch(
   "https://content.charlesisa.dev/ghost/api/content/tags/?key=5d8b3cdb92a539dede4ee744a0"
 );
