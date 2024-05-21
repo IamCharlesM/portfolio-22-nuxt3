@@ -1,8 +1,8 @@
 <template>
   <div
-    class="hero min-h-screen max-w-screen bg-gradient-to-br from-slate-800 via-slate-900 to-black flex flex-col"
+    class="hero min-h-screen max-w-screen bg-base-300 flex flex-col text-neutral"
   >
-    <Navbar class="mb-10" />
+    <Navbar class="bg-base-300" />
     <slot class="justify-items-center" />
   </div>
 </template>
