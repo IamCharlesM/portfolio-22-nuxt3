@@ -1,16 +1,23 @@
 <template>
-  <div class="flex flex-col h-screen w-full space-y-8">
-    <div class="flex w-full h-3/6 bg-slate-400 rounded-3xl">
-      <p class="inline-block align-middle">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      </p>
-    </div>
+  <div class="grid grid-cols-1 md:grid-cols-8 grid-rows-8 gap-4 h-screen">
     <div
-      class="h-2/6 flex flex-col md:flex-row md:space-x-8 space-y-8 md:space-y-0"
+      class="col-span-full row-span-4 rounded-3xl bg-base-300 flex flex-col px-4"
     >
-      <FeauredBento title="Projects" />
-      <FeauredBento title="Stories" />
+      <h1 class="inline-block align-middle text-2xl font-semibold md:text-6xl">
+        Hello World, I'm Here to Make Yours Easier!
+      </h1>
+      <p class="text-xl md:text-2xl">
+        Whether it's jazzing up a janky old website or building a digital
+        presence from scratch, I've been cracking codes and crafting creative
+        solutions in Chicago's web scene. Let’s explore how we can elevate your
+        project together.
+      </p>
+
+      <button class="btn btn-primary">Let's talk Tech!</button>
     </div>
+
+    <FeauredBento title="Projects" />
+    <FeauredBento title="Stories" />
   </div>
 </template>
 
