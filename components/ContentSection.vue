@@ -78,7 +78,7 @@
         </div>
         <NuxtLink
           v-if="sectionTitle == 'Projects'"
-          :to="post.url"
+          :to="`/project/${post.slug}`"
           class="row-span-1 rounded-3xl border-4 border-neutral bg-base-200 p-4 text-3xl lg:col-span-full lg:row-span-2"
         >
           <div class="flex flex-col">
@@ -100,7 +100,7 @@
         <NuxtLink
           v-else
           class="row-span-1 rounded-3xl border-4 border-neutral bg-base-200 p-4 text-3xl lg:col-span-full lg:row-span-2"
-          :to="post.url"
+          :to="`/project/${post.slug}`"
         >
           <div class="fex flex-col font-semibold">
             <div>Discover the Stories Behind the Screens</div>
@@ -129,6 +129,8 @@ const props = defineProps(["type", "title", "alt"]);
 const alt = props.alt;
 
 const sectionTitle = props.title;
+
+console.log(props.type);
 
 const { data, pending, error } = await useFetch(
   `https://content.charlesisa.dev/ghost/api/content/posts/?key=5d8b3cdb92a539dede4ee744a0&filter=featured%3Atrue%2Btags%3A${props.type}`,

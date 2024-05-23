@@ -4,9 +4,9 @@
       <!-- ANCHOR Main content -->
       <HeroSection />
 
-      <ContentSection type="front-end-development" title="Projects" />
+      <ContentSection type="api" title="Projects" />
 
-      <ContentSection type="hash-projects" title="Stories" :alt="true" />
+      <ContentSection type="hash-stories" title="Stories" :alt="true" />
     </div>
   </div>
 </template>
