@@ -1,13 +1,13 @@
 <template>
   <div
     role="status"
-    class="p-4 max-w-sm rounded border border-gray-200 shadow animate-pulse md:p-6 dark:border-gray-700"
+    class="max-w-sm animate-pulse rounded border border-gray-200 p-4 shadow lg:p-6 dark:border-gray-700"
   >
     <div
-      class="flex justify-center items-center mb-4 h-48 bg-gray-300 rounded dark:bg-gray-700"
+      class="mb-4 flex h-48 items-center justify-center rounded bg-gray-300 dark:bg-gray-700"
     >
       <svg
-        class="w-12 h-12 text-gray-200 dark:text-gray-600"
+        class="h-12 w-12 text-gray-200 dark:text-gray-600"
         xmlns="http://www.w3.org/2000/svg"
         aria-hidden="true"
         fill="currentColor"
@@ -19,11 +19,11 @@
       </svg>
     </div>
     <div
-      class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"
+      class="mb-4 h-2.5 w-48 rounded-full bg-gray-200 dark:bg-gray-700"
     ></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-    <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+    <div class="mb-2.5 h-2 rounded-full bg-gray-200 dark:bg-gray-700"></div>
+    <div class="mb-2.5 h-2 rounded-full bg-gray-200 dark:bg-gray-700"></div>
+    <div class="h-2 rounded-full bg-gray-200 dark:bg-gray-700"></div>
     <span class="sr-only">Loading...</span>
   </div>
 </template>
