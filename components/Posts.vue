@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="">
     <div v-if="pending" class="flex flex-row space-x-5">
       <!-- Display an empty div if data is null -->
       <ImageLoader class="" />
@@ -11,7 +11,7 @@
       v-else
       v-for="post in data.posts"
       :key="post.id"
-      class="card min-w-fit bg-base-100 shadow-xl"
+      class="card min-w-fit bg-base-300 shadow-xl"
     >
       <NuxtLink :to="'project/' + post.slug">
         <figure>
@@ -24,7 +24,10 @@
         </figure>
         <div class="card-body">
           <!-- ANCHOR Post title -->
-          <h2 class="card-title text-white">
+          <h2
+            v-if="isWithinOneMonth(post.published_at)"
+            class="card-title text-white"
+          >
             {{ post.title }}
             <div class="badge text-yellow-600">NEW</div>
           </h2>
@@ -48,6 +51,20 @@
 
 <script setup>
 const { data, pending } = useFetch(
-  "https://content.charlesisa.dev/ghost/api/content/posts/?key=5d8b3cdb92a539dede4ee744a0&include=tags"
+  "https://content.charlesisa.dev/ghost/api/content/posts/?key=5d8b3cdb92a539dede4ee744a0&include=tags",
 );
+
+const isWithinOneMonth = (publishedOn) => {
+  const today = new Date();
+  const oneMonthAgo = new Date();
+  oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1);
+
+  // Parse the publishedOn string into a Date object
+  const publishedDate = new Date(publishedOn);
+
+  return publishedDate >= oneMonthAgo && publishedDate <= today;
+};
+
+// Call the function with a sample date
+console.log(data.value.posts[0].published_at);
 </script>

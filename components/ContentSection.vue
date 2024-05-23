@@ -1,18 +1,21 @@
 <template>
-  <div class="grid gap-4 md:h-screen md:grid-cols-8 md:grid-rows-8">
+  <div class="grid gap-4 py-10 lg:h-screen lg:grid-cols-8 lg:grid-rows-7">
     <!--  -->
     <div
-      class="col-span-full grid grid-cols-1 gap-4 md:row-span-3 md:grid-cols-6 md:grid-rows-2"
+      class="col-span-full grid grid-cols-1 gap-4 lg:row-span-3 lg:grid-cols-6 lg:grid-rows-2"
     >
       <!-- ANCHOR Section name -->
       <div
-        class="row-span-1 rounded-3xl p-4 text-6xl md:col-span-4 md:row-span-full md:text-9xl"
+        class="row-span-1 rounded-3xl p-4 text-6xl lg:col-span-4 lg:row-span-full lg:text-9xl"
+        :id="sectionTitle.toLowerCase()"
       >
         {{ sectionTitle }}
       </div>
-      <div class="rounded-3xl bg-base-300 p-4 md:col-span-2 md:row-span-2">
+      <div class="rounded-3xl bg-base-300 p-4 lg:col-span-2 lg:row-span-2">
         <!-- ANCHOR Section CTA -->
-        <div class="text-2xl">
+        <div
+          class="flex-flex-col my-auto content-center space-y-8 text-3xl lg:space-y-4"
+        >
           <p v-if="sectionTitle == 'Projects'">
             Dive into some of the projects I've steered. From the ground up,
             I've developed systems that not only perform but also deliver on the
@@ -20,13 +23,13 @@
             like Django, React, and AWS to transform ideas into digital
             realities.
           </p>
-          <span v-else>
+          <p v-else>
             Each project has its own story, and here’s where I tell them. Delve
             into detailed case studies showcasing my process, the challenges
             faced, and the innovative strategies I employed to deliver robust
             digital solutions for clients like Chitown Champions and Platas
             Auto.
-          </span>
+          </p>
           <NuxtLink to="/project" class="btn btn-primary w-1/2"
             >See full portfolio</NuxtLink
           >
@@ -36,21 +39,21 @@
 
     <!-- ANCHOR Main content -->
     <div
-      class="col-span-full grid grid-rows-2 gap-4 md:grid-cols-8 md:grid-rows-4"
-      :class="{ 'md:order-last': alt, '': !alt }"
+      class="col-span-full grid grid-rows-2 gap-4 lg:row-span-4 lg:grid-cols-8 lg:grid-rows-4"
+      :class="{ 'lg:order-last': alt, '': !alt }"
     >
       <!-- ANCHOR Main bottom box -->
       <div
-        class="relative row-span-1 grid content-end rounded-3xl bg-cover bg-center p-4 md:col-span-6 md:row-span-full"
+        class="relative row-span-1 grid content-end rounded-3xl bg-cover bg-center p-4 lg:col-span-6 lg:row-span-full"
         :style="{ 'background-image': `url(${post.feature_image})` }"
       >
         <!-- Gradient overlay -->
         <div
-          class="absolute inset-0 rounded-3xl bg-gradient-to-t from-info via-info via-40% to-transparent md:bg-gradient-to-r"
+          class="absolute inset-0 rounded-3xl bg-gradient-to-t from-info via-info via-40% to-transparent lg:bg-gradient-to-r"
         ></div>
         <!-- Content -->
         <div class="relative grid self-end">
-          <span class="text-xl font-semibold md:text-5xl">
+          <span class="text-xl font-semibold lg:text-5xl">
             {{ post.title }}</span
           >
         </div>
@@ -58,27 +61,59 @@
 
       <!-- ANCHOR Small boxes to the right -->
       <div
-        class="row-span-1 grid grid-rows-2 gap-4 md:col-span-2 md:row-span-full md:grid-cols-2 md:grid-rows-4"
+        class="row-span-1 grid grid-rows-2 gap-4 lg:col-span-2 lg:row-span-full lg:grid-cols-2 lg:grid-rows-4"
       >
         <div
-          class="row-span-1 rounded-3xl p-4 md:col-span-full md:row-span-2"
-          :class="{ 'bg-info ': alt, 'text-info-300 bg-secondary': !alt }"
+          class="row-span-1 rounded-3xl p-4 text-2xl lg:col-span-full lg:row-span-2"
+          :class="{ 'bg-info ': alt, 'text-info-300 bg-success': !alt }"
         >
           {{ post.custom_excerpt }}
         </div>
         <NuxtLink
           v-if="sectionTitle == 'Projects'"
           :to="post.url"
-          class="row-span-1 rounded-3xl bg-base-200 p-4 text-3xl md:col-span-full md:row-span-2"
+          class="row-span-1 rounded-3xl bg-base-200 p-4 text-3xl lg:col-span-full lg:row-span-2"
         >
-          <div>See the Code in Action lorem</div>
+          <div class="flex flex-col">
+            <div>See the Code in Action</div>
+            <div>
+              <client-only>
+                <div class="flex">
+                  <Vue3Lottie
+                    animationLink="https://lottie.host/44b44d7e-918a-4fd7-93e4-05192098e222/NkyyUzsZx5.json"
+                    loop
+                    autoplay
+                    background="transparent"
+                    speed="1"
+                    class="!mx-0 !w-full translate-y-0 self-end lg:block lg:!h-fit lg:!w-fit lg:-translate-y-8"
+                  />
+                </div>
+              </client-only>
+            </div>
+          </div>
         </NuxtLink>
         <NuxtLink
           v-else
-          class="row-span-1 rounded-3xl bg-base-200 p-4 text-3xl md:col-span-full md:row-span-2"
+          class="row-span-1 rounded-3xl bg-base-200 p-4 text-3xl lg:col-span-full lg:row-span-2"
           :to="post.url"
         >
-          <div>Discover the Stories Behind the Screens</div>
+          <div class="fex flex-col">
+            <div>Discover the Stories Behind the Screens</div>
+            <div>
+              <client-only>
+                <div class="flex">
+                  <Vue3Lottie
+                    animationLink="https://lottie.host/44b44d7e-918a-4fd7-93e4-05192098e222/NkyyUzsZx5.json"
+                    loop
+                    autoplay
+                    background="transparent"
+                    speed="1"
+                    class="!mx-0 !w-full translate-y-0 self-end lg:block lg:!h-fit lg:!w-fit lg:-translate-y-8"
+                  />
+                </div>
+              </client-only>
+            </div>
+          </div>
         </NuxtLink>
       </div>
     </div>
