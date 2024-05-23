@@ -6,10 +6,17 @@
     >
       <!-- ANCHOR Section name -->
       <div
-        class="row-span-1 rounded-3xl p-4 text-6xl lg:col-span-4 lg:row-span-full lg:text-9xl"
+        class="flex flex-col rounded-3xl p-4 text-6xl lg:col-span-4 lg:row-span-full lg:grid lg:grid-cols-2 lg:self-center lg:text-9xl"
         :id="sectionTitle.toLowerCase()"
       >
         {{ sectionTitle }}
+        <div class="h-52 w-auto border-b-8 border-success">
+          <img
+            src="../public/content.png"
+            alt="peep crouching"
+            class="mx-auto h-full"
+          />
+        </div>
       </div>
       <div class="rounded-3xl bg-base-300 p-4 lg:col-span-2 lg:row-span-2">
         <!-- ANCHOR Section CTA -->
@@ -39,12 +46,12 @@
 
     <!-- ANCHOR Main content -->
     <div
-      class="col-span-full grid grid-rows-2 gap-4 lg:row-span-4 lg:grid-cols-8 lg:grid-rows-4"
+      class="col-span-full flex grid-rows-2 flex-col gap-4 lg:row-span-4 lg:grid lg:grid-cols-8 lg:grid-rows-4"
       :class="{ 'lg:order-last': alt, '': !alt }"
     >
       <!-- ANCHOR Main bottom box -->
       <div
-        class="relative row-span-1 grid content-end rounded-3xl bg-cover bg-center p-4 lg:col-span-6 lg:row-span-full"
+        class="relative h-60 content-end rounded-3xl bg-cover bg-center p-4 lg:col-span-6 lg:row-span-full lg:grid lg:h-auto"
         :style="{ 'background-image': `url(${post.feature_image})` }"
       >
         <!-- Gradient overlay -->

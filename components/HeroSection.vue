@@ -11,7 +11,7 @@
       <div class="h-52 w-auto rounded-3xl bg-success lg:hidden">
         <img
           src="../public/Open Peeps - Sitting.png"
-          alt=""
+          alt="peep sitting to the left"
           class="mx-auto h-full"
         />
       </div>
