@@ -1,11 +1,9 @@
 <template lang="">
-  <div class="navbar bg-base-100 mb-10">
-  
-
+  <div class="navbar mb-10 bg-base-100">
     <div class="navbar-start">
-        <div class=" h-20"">
-      <img class="h-full hidden lg:flex" src="../public/logo.webp" alt="logo" />
-    </div>
+      <NuxtLink to="/" class="navbar-brand hidden lg:block">
+        <img class="h-20" src="../public/logo.webp" alt="logo" />
+      </NuxtLink>
       <!-- ANCHOR Mobile items -->
       <div class="dropdown">
         <label tabindex="0" class="btn btn-ghost lg:hidden">
@@ -29,7 +27,7 @@
           class="dropdown-content menu rounded-box menu-compact mt-3 w-52 bg-base-100 p-2 shadow"
         >
           <li v-for="(page, index) in pages" :key="index">
-            <nuxtLink :to="page.to" class="">{{ page.property }}</nuxtLink>
+            <NuxtLink :to="page.to" class="">{{ page.property }}</NuxtLink>
           </li>
           <li>
             <a
@@ -47,23 +45,27 @@
               >Resume</a
             >
           </li>
-          <li> <a
-            href="https://calendly.com/d/44j-vwq-mtv/30-minute-meeting"
-            target="_blank"
-            class=""
-            ><button class="btn btn-primary btn-sm lg:hidden"> Hire me</button></a> </li>
+          <li>
+            <a
+              href="https://calendly.com/d/44j-vwq-mtv/30-minute-meeting"
+              target="_blank"
+              class=""
+              ><button class="btn btn-primary btn-sm lg:hidden">
+                Hire me
+              </button></a
+            >
+          </li>
         </ul>
-        
       </div>
     </div>
     <!-- ANCHOR Desktop items -->
     <div class="navbar-center">
-      <div class=" h-20"">
-      <img class="h-full lg:hidden" src="../public/logo.webp" alt="logo" />
-    </div>
-      <ul class="menu menu-horizontal px-1  hidden lg:flex">
+      <NuxtLink to="/" class="navbar-brand lg:hidden">
+        <img class="h-20" src="../public/logo.webp" alt="logo" />
+      </NuxtLink>
+      <ul class="menu menu-horizontal hidden px-1 lg:flex">
         <li v-for="(page, index) in pages" :key="index">
-          <nuxtLink :to="page.to" class="">{{ page.property }}</nuxtLink>
+          <NuxtLink :to="page.to" class="">{{ page.property }}</NuxtLink>
         </li>
         <li>
           <a
@@ -84,13 +86,14 @@
       </ul>
     </div>
     <div class="navbar-end">
-<a
-            href="https://calendly.com/d/44j-vwq-mtv/30-minute-meeting"
-            target="_blank"
-            class=""
-            > <button class="btn btn-primary hidden lg:flex "> Hire me</button> </a>   </div>
-
-
+      <a
+        href="https://calendly.com/d/44j-vwq-mtv/30-minute-meeting"
+        target="_blank"
+        class=""
+      >
+        <button class="btn btn-primary hidden lg:flex">Hire me</button>
+      </a>
+    </div>
   </div>
 </template>
 

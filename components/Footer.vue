@@ -2,9 +2,9 @@
   <footer class="footer footer-center rounded bg-base-300 p-10">
     <nav class="grid grid-flow-col gap-4">
       <span v-for="(page, index) in pages" :key="index">
-        <nuxtLink :to="page.to" class="hover:underline">{{
+        <NuxtLink :to="page.to" class="hover:underline">{{
           page.property
-        }}</nuxtLink>
+        }}</NuxtLink>
       </span>
       <a
         href="https://calendly.com/d/44j-vwq-mtv/30-minute-meeting"
