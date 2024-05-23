@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <div class="mx-auto px-4">
     <div class="relative max-w-7xl justify-items-center">
       <div>
-        <h1 class="text-3xl text-center font-bold lg:text-4xl text-white mb-5">
+        <h1 class="mb-5 text-center text-3xl font-bold text-white lg:text-4xl">
           All projects
         </h1>
-        <p class="max-w-4xl text-xl mx-auto text-white">
+        <p class="mx-auto max-w-4xl text-xl text-white">
           Welcome to my projects webpage! Here you will find a selection of my
           past and current projects, ranging from personal hobbies to
           professional work. I hope you find something that interests you, and
@@ -14,7 +14,7 @@
         </p>
       </div>
       <posts
-        class="mx-auto mt-12 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3"
+        class="mx-auto grid max-w-lg gap-5 py-12 lg:max-w-none lg:grid-cols-3"
       />
     </div>
   </div>
@@ -22,9 +22,6 @@
 
 <script setup>
 definePageMeta({ layout: "project" });
-const { data, pending } = useFetch(
-  "https://content.charlesisa.dev/ghost/api/content/posts/?key=5d8b3cdb92a539dede4ee744a0&include=tags"
-);
 
 useHead({
   title: "All projects",

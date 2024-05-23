@@ -1,8 +1,9 @@
 <template>
   <div
-    class="hero min-h-screen max-w-screen bg-gradient-to-br from-slate-800 via-slate-900 to-black flex flex-col"
+    class="mx-auto flex min-h-screen max-w-screen-2xl flex-col scroll-smooth bg-base-100 text-neutral"
   >
-    <Navbar class="mb-10" />
-    <slot class="justify-items-center" />
+    <Navbar />
+    <slot />
+    <Footer />
   </div>
 </template>
