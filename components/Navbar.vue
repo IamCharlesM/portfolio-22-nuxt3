@@ -47,7 +47,11 @@
               >Resume</a
             >
           </li>
-          <li><button class="btn btn-primary btn-sm lg:hidden"> Hire me</button> </li>
+          <li> <a
+            href="https://calendly.com/d/44j-vwq-mtv/30-minute-meeting"
+            target="_blank"
+            class=""
+            ><button class="btn btn-primary btn-sm lg:hidden"> Hire me</button></a> </li>
         </ul>
         
       </div>
@@ -80,7 +84,11 @@
       </ul>
     </div>
     <div class="navbar-end">
-<button class="btn btn-primary hidden lg:flex "> Hire me</button>    </div>
+<a
+            href="https://calendly.com/d/44j-vwq-mtv/30-minute-meeting"
+            target="_blank"
+            class=""
+            > <button class="btn btn-primary hidden lg:flex "> Hire me</button> </a>   </div>
 
 
   </div>

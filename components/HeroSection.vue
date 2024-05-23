@@ -50,8 +50,13 @@
         />
       </div>
       <span class="col-start-3 row-start-3">
-        <button class="btn btn-primary btn-wide">Let's talk Tech!</button>
-      </span>
+        <a
+          href="https://www.linkedin.com/in/forcharles/"
+          target="_blank"
+          class=""
+          ><button class="btn btn-primary btn-wide">Let's talk Tech!</button>
+        </a></span
+      >
     </div>
 
     <FeauredBento title="Projects" />
