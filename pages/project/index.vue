@@ -14,7 +14,7 @@
         </p>
       </div>
       <posts
-        class="mx-auto mt-12 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3"
+        class="mx-auto grid max-w-lg gap-5 py-12 lg:max-w-none lg:grid-cols-3"
       />
     </div>
   </div>
@@ -22,11 +22,6 @@
 
 <script setup>
 definePageMeta({ layout: "project" });
-const { data, pending } = useFetch(
-  "https://content.charlesisa.dev/ghost/api/content/posts/?key=5d8b3cdb92a539dede4ee744a0&include=tags",
-);
-
-console.log(data.value.posts[1]);
 
 useHead({
   title: "All projects",

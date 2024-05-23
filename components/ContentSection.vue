@@ -14,7 +14,7 @@
       <div class="rounded-3xl bg-base-300 p-4 lg:col-span-2 lg:row-span-2">
         <!-- ANCHOR Section CTA -->
         <div
-          class="flex-flex-col my-auto content-center space-y-8 text-3xl lg:space-y-4"
+          class="flex-flex-col my-auto content-center space-y-8 text-2xl lg:space-y-4 lg:text-2xl"
         >
           <p v-if="sectionTitle == 'Projects'">
             Dive into some of the projects I've steered. From the ground up,
@@ -64,7 +64,7 @@
         class="row-span-1 grid grid-rows-2 gap-4 lg:col-span-2 lg:row-span-full lg:grid-cols-2 lg:grid-rows-4"
       >
         <div
-          class="row-span-1 rounded-3xl p-4 text-2xl lg:col-span-full lg:row-span-2"
+          class="row-span-1 rounded-3xl p-4 text-xl lg:col-span-full lg:row-span-2"
           :class="{ 'bg-info ': alt, 'text-info-300 bg-success': !alt }"
         >
           {{ post.custom_excerpt }}
@@ -72,45 +72,41 @@
         <NuxtLink
           v-if="sectionTitle == 'Projects'"
           :to="post.url"
-          class="row-span-1 rounded-3xl bg-base-200 p-4 text-3xl lg:col-span-full lg:row-span-2"
+          class="row-span-1 rounded-3xl border-4 border-neutral bg-base-200 p-4 text-3xl lg:col-span-full lg:row-span-2"
         >
           <div class="flex flex-col">
             <div>See the Code in Action</div>
-            <div>
+            <div class="h-full">
               <client-only>
-                <div class="flex">
-                  <Vue3Lottie
-                    animationLink="https://lottie.host/44b44d7e-918a-4fd7-93e4-05192098e222/NkyyUzsZx5.json"
-                    loop
-                    autoplay
-                    background="transparent"
-                    speed="1"
-                    class="!mx-0 !w-full translate-y-0 self-end lg:block lg:!h-fit lg:!w-fit lg:-translate-y-8"
-                  />
-                </div>
+                <Vue3Lottie
+                  animationLink="https://lottie.host/44b44d7e-918a-4fd7-93e4-05192098e222/NkyyUzsZx5.json"
+                  loop
+                  autoplay
+                  background="transparent"
+                  speed="1"
+                  class="!mx-0 !w-full translate-y-0 self-end lg:block lg:!h-60 lg:!w-fit lg:-translate-y-8"
+                />
               </client-only>
             </div>
           </div>
         </NuxtLink>
         <NuxtLink
           v-else
-          class="row-span-1 rounded-3xl bg-base-200 p-4 text-3xl lg:col-span-full lg:row-span-2"
+          class="row-span-1 rounded-3xl border-4 border-neutral bg-base-200 p-4 text-3xl lg:col-span-full lg:row-span-2"
           :to="post.url"
         >
-          <div class="fex flex-col">
+          <div class="fex flex-col font-semibold">
             <div>Discover the Stories Behind the Screens</div>
-            <div>
+            <div class="h-full">
               <client-only>
-                <div class="flex">
-                  <Vue3Lottie
-                    animationLink="https://lottie.host/44b44d7e-918a-4fd7-93e4-05192098e222/NkyyUzsZx5.json"
-                    loop
-                    autoplay
-                    background="transparent"
-                    speed="1"
-                    class="!mx-0 !w-full translate-y-0 self-end lg:block lg:!h-fit lg:!w-fit lg:-translate-y-8"
-                  />
-                </div>
+                <Vue3Lottie
+                  animationLink="https://lottie.host/44b44d7e-918a-4fd7-93e4-05192098e222/NkyyUzsZx5.json"
+                  loop
+                  autoplay
+                  background="transparent"
+                  speed="1"
+                  class="!mx-0 !w-full translate-y-0 self-end lg:block lg:!h-60 lg:!w-fit lg:-translate-y-16"
+                />
               </client-only>
             </div>
           </div>
