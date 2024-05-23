@@ -50,9 +50,12 @@
 </template>
 
 <script setup>
-const { data, pending } = useFetch(
+const { data, pending, error } = await useFetch(
   "https://content.charlesisa.dev/ghost/api/content/posts/?key=5d8b3cdb92a539dede4ee744a0&include=tags",
 );
+if (error.value) {
+  console.error("Fetch error:", error.value);
+}
 
 const isWithinOneMonth = (publishedOn) => {
   const today = new Date();
