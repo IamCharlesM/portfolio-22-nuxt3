@@ -31,7 +31,7 @@
           </li>
           <li>
             <a
-              href="https://calendly.com/d/44j-vwq-mtv/30-minute-meeting"
+              href="https://calendly.com/because-e2g/30min"
               target="_blank"
               class=""
               >Work with me</a
@@ -47,7 +47,7 @@
           </li>
           <li>
             <a
-              href="https://calendly.com/d/44j-vwq-mtv/30-minute-meeting"
+              href="https://calendly.com/because-e2g/30min"
               target="_blank"
               class=""
               ><button class="btn btn-primary btn-sm lg:hidden">
@@ -69,7 +69,7 @@
         </li>
         <li>
           <a
-            href="https://calendly.com/d/44j-vwq-mtv/30-minute-meeting"
+            href="https://calendly.com/because-e2g/30min"
             target="_blank"
             class=""
             >Work with me</a
@@ -86,11 +86,7 @@
       </ul>
     </div>
     <div class="navbar-end">
-      <a
-        href="https://calendly.com/d/44j-vwq-mtv/30-minute-meeting"
-        target="_blank"
-        class=""
-      >
+      <a href="https://calendly.com/because-e2g/30min" target="_blank" class="">
         <button class="btn btn-primary hidden lg:flex">Hire me</button>
       </a>
     </div>

@@ -7,10 +7,10 @@
         }}</NuxtLink>
       </span>
       <a
-        href="https://calendly.com/d/44j-vwq-mtv/30-minute-meeting"
+        href="https://calendly.com/because-e2g/30min"
         target="_blank"
         class="hover:underline"
-        >Work with me</a
+        >Hire me</a
       >
       <a
         href="https://docs.google.com/document/d/1iU0btnTA44hugqX1iixqxUWb-Nl92XZbhwmcqvL32aQ/edit#heading=h.rlsx4o5b4mpo"
