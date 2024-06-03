@@ -69,5 +69,5 @@ const isWithinOneMonth = (publishedOn) => {
 };
 
 // Call the function with a sample date
-console.log(data.value.posts[0].published_at);
+// console.log(data.value.posts[0].published_at);
 </script>
