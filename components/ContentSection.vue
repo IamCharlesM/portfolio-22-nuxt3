@@ -130,7 +130,7 @@ const alt = props.alt;
 
 const sectionTitle = props.title;
 
-console.log(props.type);
+// console.log(props.type);
 
 const { data, pending, error } = await useFetch(
   `https://content.charlesisa.dev/ghost/api/content/posts/?key=5d8b3cdb92a539dede4ee744a0&filter=featured%3Atrue%2Btags%3A${props.type}`,
