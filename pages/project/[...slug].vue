@@ -1,12 +1,12 @@
 <template>
-  <div>
+  <div class="mx-auto">
     <div v-if="pending">...loading</div>
     <div
       v-for="(post, index) in data.posts"
       :key="index"
-      class="hero-content text-center flex flex-col"
+      class="hero-content flex flex-col text-center"
     >
-      <h1 class="text-3xl text-center font-bold lg:text-4xl text-white">
+      <h1 class="text-center text-3xl font-bold text-white lg:text-4xl">
         {{ post.meta_title }}
       </h1>
 
@@ -33,7 +33,7 @@ definePageMeta({ layout: "project" });
 const route = useRoute();
 let slug = route.params.slug[0];
 const { data, pending } = await useFetch(
-  `https://content.charlesisa.dev/ghost/api/content/posts/slug/${slug}/?key=5d8b3cdb92a539dede4ee744a0&include=tags`
+  `https://content.charlesisa.dev/ghost/api/content/posts/slug/${slug}/?key=5d8b3cdb92a539dede4ee744a0&include=tags`,
 );
 
 const meta = data.value.posts[0];
