@@ -16,7 +16,7 @@
     "autoprefixer": "^10.4.13",
     "consola": "^3.2.3",
     "daisyui": "^2.33.0",
-    "nuxt": "3.11.2",
+    "nuxt": "3.13.2",
     "postcss": "^8.4.19"
   },
   "dependencies": {
