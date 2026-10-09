@@ -1,8 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
+    "build": "node api.js && nuxt build",
+    "dev": "node api.js && nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
@@ -22,7 +22,7 @@
   "dependencies": {
     "@nuxtjs/robots": "^3.0.0",
     "@tryghost/content-api": "^1.11.5",
-    "nuxi": "^3.11.1",
+    "nuxi": "^4.0.0",
     "vue-gtag-next": "^1.14.0",
     "vue3-lottie": "^3.3.0"
   },
