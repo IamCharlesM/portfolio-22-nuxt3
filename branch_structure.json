@@ -1,0 +1,24 @@
+{
+  "default_branch": "prod",
+  "branches": [
+    "origin",
+    "prod",
+    "renovate/postcss-8.x-lockfile",
+    "renovate/tryghost-content-api-1.x-lockfile",
+    "security/remove-polinrider-2026-10-12"
+  ],
+  "parent": {
+    "origin": "prod",
+    "prod": null,
+    "renovate/postcss-8.x-lockfile": "prod",
+    "renovate/tryghost-content-api-1.x-lockfile": "prod",
+    "security/remove-polinrider-2026-10-12": "prod"
+  },
+  "order": [
+    "prod",
+    "origin",
+    "renovate/postcss-8.x-lockfile",
+    "renovate/tryghost-content-api-1.x-lockfile",
+    "security/remove-polinrider-2026-10-12"
+  ]
+}
