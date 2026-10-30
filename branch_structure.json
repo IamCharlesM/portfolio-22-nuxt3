@@ -1,0 +1,27 @@
+{
+  "default_branch": "prod",
+  "branches": [
+    "origin",
+    "prod",
+    "renovate/autoprefixer-10.x-lockfile",
+    "renovate/postcss-8.x-lockfile",
+    "renovate/tryghost-content-api-1.x-lockfile",
+    "security/remove-polinrider-2026-10-12"
+  ],
+  "parent": {
+    "origin": "prod",
+    "prod": null,
+    "renovate/autoprefixer-10.x-lockfile": "prod",
+    "renovate/postcss-8.x-lockfile": "prod",
+    "renovate/tryghost-content-api-1.x-lockfile": "prod",
+    "security/remove-polinrider-2026-10-12": "prod"
+  },
+  "order": [
+    "prod",
+    "origin",
+    "renovate/autoprefixer-10.x-lockfile",
+    "renovate/postcss-8.x-lockfile",
+    "renovate/tryghost-content-api-1.x-lockfile",
+    "security/remove-polinrider-2026-10-12"
+  ]
+}
