@@ -1,8 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "build": "node api.js && nuxt build",
-    "dev": "node api.js && nuxt dev",
+    "build": "node init && nuxt build",
+    "dev": "node init && nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
@@ -24,7 +24,7 @@
     "@tryghost/content-api": "^1.11.5",
     "nuxi": "^3.11.1",
     "vue-gtag-next": "^1.14.0",
-    "vue3-lottie": "^3.3.0"
+    "vue3-lottie": "^4.0.0"
   },
   "prettier": {
     "plugins": [

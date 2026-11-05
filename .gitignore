@@ -4,7 +4,6 @@ node_modules
 .nitro
 .cache
 .output
-.env
 dist
 public/C-McGregory-Resume.pdf
 
@@ -12,3 +11,4 @@ public/C-McGregory-Resume.pdf
 branch_structure.json
 temp_auto_push.bat
 temp_interactive_push.bat
+config.bat
